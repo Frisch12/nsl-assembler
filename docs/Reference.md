@@ -38,7 +38,7 @@ When introducing new variable names in nsL, you do not need to declare them usin
 
 ### Strings
 
-Strings can still use all 3 quote characters: `"`, `‘` and ```. However the `$\` escape sequence is now a single `\` and so it is now required to use `\r`, `\n`, `\t`, `\"` etc. instead. Two `\\` characters will result in a single `\`. Note that currently an incorrect escape sequence will not throw an error. A lone `\` character will simply be removed from the string. Like in C# you can prefix a string with a `@` to disable escape sequences for that string. For example:
+Strings can still use all 3 quote characters: `"`, `‘` and <code>\`</code>. However the `$\` escape sequence is now a single `\` and so it is now required to use `\r`, `\n`, `\t`, `\"` etc. instead. Two `\\` characters will result in a single `\`. Note that currently an incorrect escape sequence will not throw an error. A lone `\` character will simply be removed from the string. Like in C# you can prefix a string with a `@` to disable escape sequences for that string. For example:
 
     $R0 = “some string\r\n”; // results in a new line at the end
     $R1 = @“some string\r\n”; // results in “\r\n” at the end
@@ -325,7 +325,7 @@ At this point, MyConst will have a value of 105.
 
     #define MyConstName `late_eval_value`
 
-Here the special ``` quote character is used around the value.
+Here the special <code>\`</code> quote character is used around the value.
 
 * The value does not need to be a complete expression; it can be any incomplete portion of nsL code.
 
